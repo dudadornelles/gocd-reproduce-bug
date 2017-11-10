@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="93">
+  <server artifactsdir="artifacts" agentAutoRegisterKey="a877134a-6c5f-41a7-a756-e1b11be6f607" webhookSecret="3b4b61dc-ec64-475f-a184-f39eda42821c" commandRepositoryLocation="default" serverId="75b9b57a-ed2e-4e7f-8bce-e36fc7e4c819">
+    <security>
+      <authConfigs>
+        <authConfig id="passwordfile" pluginId="cd.go.authentication.passwordfile">
+          <property>
+            <key>PasswordFilePath</key>
+            <value>/godata/config/htpasswd</value>
+          </property>
+        </authConfig>
+      </authConfigs>
+    </security>
+  </server>
+  <config-repos>
+    <config-repo plugin="yaml.config.plugin">
+      <git url="https://github.com/dudadornelles/gocd-reproduce-bug.git" />
+    </config-repo>
+  </config-repos>
+</cruise>
