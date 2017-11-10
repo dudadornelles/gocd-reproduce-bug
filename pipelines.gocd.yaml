@@ -1,0 +1,27 @@
+pipelines:
+  pipelines-1-2.yaml:
+    group: ssd
+    label_template: "6.4.0.${COUNT}" 
+    environment_variables: 
+        MAJOR_VERSION: 6
+        MINOR_VERSION: 4
+        FEATURE_VERSION: 0
+        AWS_ACCESS_KEY_ID: 'SOMEKEYLALALA'
+        AWS_PROFILE: 'sonic'
+    materials:
+      test-scripts:
+        git: https://github.com/dudadornelles/gocd-reproduce-bug.git
+        destination: ssd
+    
+    stages:
+      - build: 
+          clean_workspace: true
+          jobs:
+            build-app: 
+              resources:
+                - abc
+              tasks:
+                - exec: 
+                    command: echo
+                    arguments:
+                      - HI
