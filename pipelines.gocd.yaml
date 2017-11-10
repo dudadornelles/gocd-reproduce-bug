@@ -1,6 +1,6 @@
 pipelines:
   pipelines-1-2.yaml:
-    group: ssd
+    group: pgroup
     label_template: "6.4.0.${COUNT}" 
     environment_variables: 
         MAJOR_VERSION: 6

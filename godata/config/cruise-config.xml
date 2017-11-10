@@ -16,5 +16,10 @@
     <config-repo plugin="yaml.config.plugin">
       <git url="https://github.com/dudadornelles/gocd-reproduce-bug.git" />
     </config-repo>
+    <config-repo plugin="yaml.config.plugin">
+      <git url="https://github.com/dudadornelles/gocd-reproduce-bug-2.git" />
+    </config-repo>
   </config-repos>
+  <pipelines group="pgroup" />
+  <pipelines group="ssd" />
 </cruise>
